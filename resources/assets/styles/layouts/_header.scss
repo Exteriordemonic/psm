@@ -1,0 +1,83 @@
+/* stylelint-disable */
+
+.header {
+  $root: &;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $special;
+  width: gutter(10);
+  height: 100%;
+  transition: $transition ease-in;
+
+  &.-is-active {
+    width: 100%;
+
+    #{$root}__brand {
+      left: gutter(10);
+      margin-left: 0;
+
+      svg {
+        width: gutter(20);
+      }
+
+      #napis {
+        opacity: 1;
+      }
+    }
+
+    #{$root}__hamburger--close {
+      opacity: 1;
+    }
+
+    #{$root}__nav {
+      display: flex;
+    }
+  }
+
+  &__brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: gutter(10);
+    margin: gutter(5) 0 0 gutter(-2);
+    transition: $transition ease-in;
+
+    svg {
+      width: gutter(14);
+      height: auto;
+      transition: $transition ease-in;
+
+      #napis {
+        opacity: 0;
+        transition: $transition ease-in;
+      }
+    }
+  }
+
+  &__hamburger {
+    @extend %absolute;
+
+    right: unset;
+    left: gutter(3.1);
+
+    &--close {
+      opacity: 0;
+      left: unset;
+      right: gutter(10);
+      top: gutter(8);
+      bottom: unset;
+    }
+  }
+
+  &__nav {
+    @extend %absolute;
+
+    right: unset;
+    left: gutter(10);
+    top: 0;
+    bottom: 0;
+    display: none;
+  }
+}

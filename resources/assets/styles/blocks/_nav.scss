@@ -1,0 +1,113 @@
+/* stylelint-disable */
+
+.nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: calc(100% - #{$gutter * 10});
+  padding-top: gutter(40);
+
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      @extend .menu-link;
+
+      color: $light;
+      margin-bottom: gutter(0.8);
+      opacity: 0;
+      transition: $transition;
+      animation: show-menu $transition cubic-bezier(0.61, 0.34, 0.56, 0.87) both;
+
+      &-has-children {
+        @extend .menu-link;
+        @extend .menu-link--parent;
+
+        margin-bottom: gutter(1.6);
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.05}s;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-bottom: gutter(6.4);
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &.-is-active {
+      & > .menu-item {
+        animation: none;
+        opacity: 0.5;
+
+        &.-is-active {
+          opacity: 1;
+
+          .sub-menu {
+            display: flex;
+
+            .menu-link {
+              transition: $transition ease-in;
+              &:hover {
+                color: rgba($light, 0.5);
+                animation-delay: 0;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 50vw;
+    top: gutter(40);
+    right: unset;
+    padding: 0;
+    list-style: none;
+
+    .menu-link {
+      &:nth-child(3) {
+        margin-bottom: gutter(0.8);
+      }
+    }
+  }
+}
+
+@keyframes show-menu {
+  from {
+    opacity: 0;
+    transform: translateY(gutter(4));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hover-menu {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}

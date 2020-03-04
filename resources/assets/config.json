@@ -1,0 +1,20 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ]
+  },
+  "publicPath": "/psm/wp-content/themes/psm",
+  "devUrl": "http://localhost/psm",
+  "proxyUrl": "http://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "app/**/*.php",
+    "config/**/*.php",
+    "resources/views/**/*.php"
+  ]
+}

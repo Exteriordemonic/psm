@@ -1,0 +1,63 @@
+.hamburger {
+  $root: &;
+
+  width: gutter(3.8);
+  height: gutter(1.9);
+  border: 0;
+  background-color: transparent;
+  transition: $transition ease-in;
+  cursor: pointer;
+
+  &.-is-active {
+    transform: translateX(gutter(3));
+    opacity: 0;
+  }
+
+  &__line {
+    @extend %absolute;
+
+    width: 100%;
+    height: gutter(0.3);
+    background-color: $light;
+    bottom: unset;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: gutter(0.75);
+      bottom: gutter(0.75);
+    }
+
+    &:nth-child(3) {
+      top: calc(100% - #{gutter(0.3)});
+    }
+  }
+
+  &--close {
+    transition: $transition * 0.5 ease-in;
+
+    #{$root}__line {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: gutter(0.75);
+        bottom: gutter(0.75);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: gutter(0.75);
+        bottom: gutter(0.75);
+      }
+    }
+
+    &.-is-active {
+      transition: $transition * 2 ease-in;
+    }
+  }
+}

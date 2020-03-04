@@ -1,0 +1,230 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "app": {
+      "name": "app",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "config": {
+      "name": "config",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "dist": {
+      "name": "dist",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "resources": {
+      "name": "resources",
+      "isOrdered": true,
+      "folders": {
+        "assets": {
+          "name": "assets",
+          "isOrdered": true,
+          "folders": {
+            "build": {
+              "name": "build",
+              "isOrdered": true,
+              "folders": {
+                "helpers": {
+                  "name": "helpers",
+                  "isOrdered": true,
+                  "folders": {},
+                  "files": {}
+                },
+                "util": {
+                  "name": "util",
+                  "isOrdered": true,
+                  "folders": {},
+                  "files": {}
+                }
+              },
+              "files": {}
+            },
+            "fonts": {
+              "name": "fonts",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "images": {
+              "name": "images",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "scripts": {
+              "name": "scripts",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "styles": {
+              "name": "styles",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            }
+          },
+          "files": {}
+        },
+        "views": {
+          "name": "views",
+          "isOrdered": true,
+          "folders": {
+            "blocks": {
+              "name": "blocks",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "components": {
+              "name": "components",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "layouts": {
+              "name": "layouts",
+              "isOrdered": true,
+              "folders": {
+                "components": {
+                  "name": "components",
+                  "isOrdered": true,
+                  "folders": {},
+                  "files": {}
+                }
+              },
+              "files": {}
+            },
+            "partials": {
+              "name": "partials",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "svg": {
+              "name": "svg",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            }
+          },
+          "files": {}
+        }
+      },
+      "files": {}
+    },
+    "stories": {
+      "name": "stories",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "vendor": {
+      "name": "vendor",
+      "isOrdered": true,
+      "folders": {
+        "bin": {
+          "name": "bin",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "brain": {
+          "name": "brain",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "composer": {
+          "name": "composer",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "doctrine": {
+          "name": "doctrine",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "illuminate": {
+          "name": "illuminate",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "nesbot": {
+          "name": "nesbot",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "paragonie": {
+          "name": "paragonie",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "psr": {
+          "name": "psr",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "ramsey": {
+          "name": "ramsey",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "roots": {
+          "name": "roots",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "soberwp": {
+          "name": "soberwp",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "squizlabs": {
+          "name": "squizlabs",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "stoutlogic": {
+          "name": "stoutlogic",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "symfony": {
+          "name": "symfony",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    }
+  },
+  "files": {
+    "CODE_OF_CONDUCT": 0,
+    "CHANGELOG": 1,
+    "LICENSE": 2,
+    "README": 3,
+    "roadmap": 4,
+    "todo": 5
+  }
+}

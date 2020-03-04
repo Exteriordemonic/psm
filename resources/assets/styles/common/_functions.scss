@@ -1,0 +1,11 @@
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@function gutter_num($num: 1) {
+  @return $gutter_num * $num;
+}
+
+@function gutter($num: 1) {
+  @return $gutter * $num;
+}

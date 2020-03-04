@@ -1,0 +1,2 @@
+* [ ] Wyczyszczenie szablonu 
+* [ ] Stworzenie menu

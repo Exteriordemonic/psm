@@ -1,0 +1,38 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+// COLORS
+$light: #fff;
+$dark: #464646;
+$black: #000;
+$special: #e3000e;
+$special-dark: #36454f;
+$special-light: #f5f6f6;
+$gray: #a7a7a7;
+
+// END COLORS
+
+$media: (
+  xs: 576px,
+  sm: 767px,
+  md: 992px,
+  lg: 1280px,
+  xl: 1440px
+);
+
+$transition: 0.3s;
+
+// font-family: 'Anton', sans-serif;
+// font-family: 'Lato', sans-serif;
+
+$font-family: (
+  main: "Montserrat",
+);
+
+$gutter: 10px;
+$gutter_num: 10;
+
+$z-index: (
+  header: 100,
+  preloader: 300
+);
