@@ -2,9 +2,10 @@ const CONFIG = {
     TRIGGER: '.menu-item-has-children',
     MENU: '.menu',
     CLASS: '-is-active',
+    OFFANIMATION: '-no-animate',
 };
 
-const { TRIGGER, MENU, CLASS } = CONFIG;
+const { TRIGGER, MENU, CLASS, OFFANIMATION } = CONFIG;
 
 const menu = {
     init() {
@@ -12,7 +13,7 @@ const menu = {
         this.menu = document.querySelector(MENU);
 
         this.class = CLASS;
-
+        this.offanimation = OFFANIMATION;
         this.addEvents();
     },
 

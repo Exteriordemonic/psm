@@ -37,6 +37,12 @@ const toggleMenu = {
 
   toggleElem(CLASS) {
     this.$elem.classList.toggle(CLASS);
+
+    const activeElems = this.$elem.querySelector('.header__nav').querySelectorAll(`.${CLASS}`);
+
+    activeElems.forEach(element => {
+      element.classList.remove(CLASS);
+    });
   },
 };
 

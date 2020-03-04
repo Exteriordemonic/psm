@@ -7,6 +7,9 @@
 @endphp
 
 <header class="header" data-menu>
+  <div class="header__bg">
+    @include('svg.logo-bg')
+  </div>
   <div class="container container--fluid">
     <div class="header__wrapper">
       <a class="header__brand-wrapper" href="{{ home_url('/') }}">

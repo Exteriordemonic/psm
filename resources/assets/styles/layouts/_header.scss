@@ -61,6 +61,7 @@
 
     right: unset;
     left: gutter(3.1);
+    z-index: 10;
 
     &--close {
       opacity: 0;
