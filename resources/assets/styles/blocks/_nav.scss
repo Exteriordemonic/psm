@@ -8,6 +8,13 @@
   width: calc(100% - #{$gutter * 10});
   padding-top: gutter(40);
 
+  @include mediaTo(sm) {
+    padding-top: 0;
+    top: gutter(10) !important;
+    width: calc(100% - #{$gutter * 3});
+    overflow-y: scroll;
+  }
+
   .menu {
     list-style: none;
     margin: 0;
@@ -21,6 +28,10 @@
       opacity: 0;
       transition: $transition;
       animation: show-menu $transition cubic-bezier(0.61, 0.34, 0.56, 0.87) both;
+
+      @include mediaTo(sm) {
+        margin-bottom: gutter(1.2);
+      }
 
       &-has-children {
         @extend .menu-link;
@@ -85,6 +96,12 @@
     right: unset;
     padding: 0;
     list-style: none;
+
+    @include mediaTo(sm) {
+      left: 0;
+      position: relative;
+      top: gutter(0.8);
+    }
 
     .menu-link {
       &:nth-child(3) {

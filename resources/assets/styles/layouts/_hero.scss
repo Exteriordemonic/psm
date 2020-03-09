@@ -1,0 +1,30 @@
+.hero {
+  height: 100vh;
+  position: relative;
+
+  @extend %overlay;
+
+  &__bg {
+    @extend %image;
+    @extend %absolute;
+
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    color: $light;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: gutter(20);
+  }
+
+  &__text {
+    max-width: gutter(66);
+    width: 100%;
+  }
+}

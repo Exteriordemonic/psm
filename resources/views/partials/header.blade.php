@@ -6,9 +6,8 @@
   $header_img = option('header_img')['id'];
 @endphp
 
-<header class="header" data-menu>
+<header class="header @if(is_front_page()) -is-active @endif" data-menu>
   <div class="header__bg">
-    @include('svg.logo-bg')
   </div>
   <div class="container container--fluid">
     <div class="header__wrapper">
@@ -19,7 +18,7 @@
       </a>
       @include('blocks.hamburger')
       @include('blocks.hamburger', ['class'=>'header__hamburger--close hamburger--close'])
-      <nav class="header__nav nav">
+      <nav class="header__nav nav @if(is_front_page()) -is-active @endif">
         @if (has_nav_menu('primary_navigation'))
           {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu']) !!}
         @endif

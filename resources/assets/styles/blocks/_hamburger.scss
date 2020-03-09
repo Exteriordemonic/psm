@@ -38,6 +38,10 @@
   &--close {
     transition: $transition * 0.5 ease-in;
 
+    @include mediaTo(sm) {
+      transition: $transition ease-in;
+    }
+
     #{$root}__line {
       &:nth-child(1) {
         transform: rotate(45deg);

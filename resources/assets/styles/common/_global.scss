@@ -75,3 +75,11 @@ button {
     pointer-events: none;
   }
 }
+
+.wrap {
+  padding-left: gutter(10);
+
+  @include mediaTo(sm) {
+    padding-left: 0;
+  }
+}

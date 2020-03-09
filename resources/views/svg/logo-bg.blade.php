@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" widthbg-="401.961" height="198.496" viewBox="0 0 401.961 198.496">
+<svg class="logo-bg" xmlns="http://www.w3.org/2000/svg" widthbg-="401.961" height="198.496" viewBox="0 0 401.961 198.496">
   <g id="bg-logo" transform="translate(0 904.517)">
     <g id="bg-napis">
       <path id="bg-Path_1" data-name="Path 1" d="M609.894-178.085a6.95,6.95,0,0,1-6.948,6.948A6.949,6.949,0,0,1,596-178.085a6.945,6.945,0,0,1,6.947-6.943,6.945,6.945,0,0,1,6.948,6.943" transform="translate(-465.322 -561.562)" fill="#fff"/>

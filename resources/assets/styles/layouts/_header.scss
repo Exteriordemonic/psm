@@ -10,16 +10,36 @@
   width: gutter(10);
   height: 100%;
   transition: $transition ease-in;
+  z-index: z-index(header);
+
+  @include mediaTo(sm) {
+    width: 100%;
+    height: gutter(5);
+  }
 
   &.-is-active {
     width: 100%;
+
+    @include mediaTo(sm) {
+      height: 100vh;
+    }
 
     #{$root}__brand {
       left: gutter(10);
       margin-left: 0;
 
+      @include mediaTo(sm) {
+        left: 0;
+        margin-left: gutter(1.5);
+        top: gutter(0.5);
+      }
+
       svg {
         width: gutter(20);
+
+        @include mediaTo(sm) {
+          width: 100%;
+        }
       }
 
       #napis {
@@ -34,6 +54,10 @@
     #{$root}__nav {
       display: flex;
     }
+
+    #{$root}__bg {
+      opacity: 1;
+    }
   }
 
   &__brand {
@@ -44,10 +68,21 @@
     margin: gutter(5) 0 0 gutter(-2);
     transition: $transition ease-in;
 
+    @include mediaTo(sm) {
+      width: gutter(8);
+      height: auto;
+      margin: gutter(1) 0;
+      left: gutter(-0.6);
+    }
+
     svg {
       width: gutter(14);
       height: auto;
       transition: $transition ease-in;
+
+      @include mediaTo(sm) {
+        width: 100%;
+      }
 
       #napis {
         opacity: 0;
@@ -63,12 +98,26 @@
     left: gutter(3.1);
     z-index: 10;
 
+    @include mediaTo(sm) {
+      right: gutter(1.5);
+      left: unset;
+      bottom: unset;
+      top: gutter(1.5);
+    }
+
     &--close {
       opacity: 0;
       left: unset;
       right: gutter(10);
       top: gutter(8);
       bottom: unset;
+
+      @include mediaTo(sm) {
+        right: gutter(4);
+        left: unset;
+        bottom: unset;
+        top: gutter(2.3);
+      }
     }
   }
 
@@ -80,5 +129,25 @@
     top: 0;
     bottom: 0;
     display: none;
+
+    @include mediaTo(sm) {
+      left: gutter(1.5);
+    }
+  }
+
+  &__bg {
+    @extend %absolute;
+
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    z-index: 10;
+    background-position: top right;
+    pointer-events: none;
+    transition: $transition ease-in;
+    opacity: 0;
+
+    @include mediaTo(sm) {
+      display: none;
+    }
   }
 }
