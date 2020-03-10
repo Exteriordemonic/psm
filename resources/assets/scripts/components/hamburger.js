@@ -29,8 +29,15 @@ const toggleMenu = {
   },
 
   hide() {
-    this.toggleElem(CLASS);
-    this.$trigger.forEach(element => { element.classList.toggle(CLASS); });
+    this.$elem.classList.remove(CLASS);
+
+    const activeElems = this.$elem.querySelector('.header__nav').querySelectorAll(`.${CLASS}`);
+
+    activeElems.forEach(element => {
+      element.classList.remove(CLASS);
+    });
+
+    this.$trigger.forEach(element => { element.classList.remove(CLASS); });
     this.isHome = false;
   },
 

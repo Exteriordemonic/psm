@@ -67,6 +67,7 @@
     width: gutter(10);
     margin: gutter(5) 0 0 gutter(-2);
     transition: $transition ease-in;
+    z-index: 10;
 
     @include mediaTo(sm) {
       width: gutter(8);
