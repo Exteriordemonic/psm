@@ -1,0 +1,70 @@
+.gallery {
+  $root: &;
+
+  position: relative;
+
+  &__title {
+    margin-bottom: gutter(5);
+  }
+
+  &__elem {
+    padding: 0 gutter(2.5);
+    height: 80vh !important;
+
+    &.is-selected {
+      #{$root}__image {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__slider {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__img-wrapper {
+    @extend %overlay;
+
+    position: relative;
+    height: 100%;
+    display: block;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.4;
+    transition: $transition ease-in;
+  }
+
+  &__button {
+    @extend %absolute;
+
+    background: transparent;
+    outline: 0 !important;
+    border: 0;
+    top: gutter(10);
+    height: gutter(20);
+    cursor: pointer;
+
+    &--prev {
+      right: unset;
+      left: gutter(3);
+    }
+
+    &--next {
+      left: unset;
+      right: gutter(3);
+    }
+  }
+
+  .flickity-viewport {
+    width: 100%;
+    height: 80vh !important;
+  }
+}

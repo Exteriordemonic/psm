@@ -1,0 +1,10 @@
+.footer {
+  position: relative;
+  color: $light;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

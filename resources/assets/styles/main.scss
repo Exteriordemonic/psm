@@ -39,10 +39,15 @@
 /** Blocks */
 @import "blocks/hamburger";
 @import "blocks/nav";
+@import "blocks/brands";
 
 /** Layouts */
 @import "layouts/header";
 @import "layouts/hero";
+@import "layouts/content";
+@import "layouts/gallery";
+@import "layouts/projects";
+@import "layouts/footer";
 
 /** Pages */
 @import "pages/home";

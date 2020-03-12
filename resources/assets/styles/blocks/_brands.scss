@@ -1,0 +1,21 @@
+.wpse-gallery-wrapper-brands {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: gutter(3);
+  }
+
+  .gallery-item {
+    background: $gray;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: gutter(3);
+    transition: $transition ease-in;
+
+    &:hover {
+      background: $special;
+    }
+  }
+}

@@ -38,7 +38,12 @@
   @extend %text;
 
   @include cssLock("font-size", 360, 1920, (gutter_num(2.4), gutter_num(4.8)));
-  @include cssLock("margin-bottom", 360, 1920, (gutter_num(3.6), gutter_num(6.4)));
+  @include cssLock(
+    "margin-bottom",
+    360,
+    1920,
+    (gutter_num(3.6), gutter_num(6.4))
+  );
 
   line-height: 1.3;
   font-weight: bold;
@@ -47,10 +52,31 @@
 .subtitle {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(3.2), gutter_num(4.2)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(2), gutter_num(3.6)));
 
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1;
+  position: relative;
+  padding-bottom: gutter(0.8);
+
+  &::after {
+    @extend %absolute;
+
+    content: "";
+    right: unset;
+    top: unset;
+    width: gutter(7);
+    height: gutter(0.2);
+    background-color: $special;
+  }
+
+  &--light {
+    color: $light;
+
+    &::after {
+      background-color: $light;
+    }
+  }
 }
 
 .small-title {
@@ -71,6 +97,8 @@
   @extend %text;
 
   @include cssLock("font-size", 360, 1920, (gutter_num(2.2), gutter_num(2.4)));
+
+  font-weight: bold;
 }
 
 .minor-text {

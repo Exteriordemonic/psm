@@ -83,3 +83,12 @@ button {
     padding-left: 0;
   }
 }
+
+#wrapper {
+  opacity: 1;
+  transition: $transition ease-in;
+
+  &.-is-active {
+    opacity: 0;
+  }
+}

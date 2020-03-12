@@ -26,8 +26,6 @@
     
   @endphp
 
-  @include('layouts.components.small-hero', ['data'=>$hero])
-
   @if ($current->name == 'produkty')
     @include('layouts.components.cats', ['data'=>$cats])
   @else

@@ -12,14 +12,12 @@
     @include('partials.header')
   
     <div class="wrap" role="document" id="wrapper">
-      <div class="content">
         <main class="main">
           @yield('content')
         </main>
         @php do_action('get_footer') @endphp
         @include('partials.footer')
         @php wp_footer() @endphp
-        </div>
       </div>
     </body>
 </html>

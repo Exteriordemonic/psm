@@ -2,4 +2,9 @@
   width: 100%;
   max-width: gutter(100);
   margin: 0 auto;
+
+  &--fluid {
+    max-width: 100%;
+    padding: 0 gutter(5);
+  }
 }

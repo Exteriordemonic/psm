@@ -15,6 +15,7 @@ import './autoload/**/*';
 import preloader from './components/preloader';
 import hamburger from './components/hamburger';
 import menu from './components/menu';
+import gallery from './components/gallery';
 
 
 /** Populate Router instance with DOM routes */
@@ -32,6 +33,7 @@ $(document).ready(function () {
   preloader.init();
   hamburger.init();
   menu.init();
+  gallery.init();
 
   // window.addEventListener('scroll', () => {
   //   skrollr.init();

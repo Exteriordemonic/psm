@@ -1,0 +1,18 @@
+.section {
+  padding: gutter(10) 0;
+  background-image: url("../images/logo.png");
+  background-size: 160%;
+  background-position: 0 100%;
+  background-color: $special-light;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &--dark {
+    background-color: $dark;
+    background-image: none;
+  }
+
+  &--half-p {
+    padding: gutter(5) 0;
+  }
+}

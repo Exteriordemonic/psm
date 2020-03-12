@@ -1,0 +1,31 @@
+.content {
+  @extend .text;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @extend .subtitle;
+
+    margin-bottom: gutter(2);
+    color: $special;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: gutter(2) 0;
+
+    li {
+      &::before {
+        content: url("../images/check.svg");
+        margin-right: gutter(0.8);
+      }
+    }
+  }
+
+  p {
+    margin: gutter(2) 0;
+  }
+}

@@ -22,7 +22,5 @@
     
   @endphp
 
-  @include('layouts.components.small-hero', ['data'=>$hero])
-  @include('layouts.components.projects', ['data'=>$projects])
 
 @endsection

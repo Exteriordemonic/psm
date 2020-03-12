@@ -1,0 +1,79 @@
+.projects {
+  $root: &;
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: gutter(5);
+    padding: 0;
+    margin: 0;
+  }
+
+  &__image {
+    @extend %image;
+
+    position: relative;
+    z-index: 10;
+    opacity: 0.2;
+    transition: $transition ease-in;
+  }
+
+  a {
+    outline-offset: 0 !important;
+  }
+
+  &__elem {
+    @extend %overlay;
+
+    position: relative;
+
+    &:nth-child(2n) {
+      #{$root}__title {
+        left: unset;
+        right: gutter(2.5);
+
+        &::after {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+
+    &:hover {
+      #{$root}__title {
+        &::after {
+          width: gutter(3.5);
+        }
+      }
+
+      #{$root}__image {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__title {
+    @extend %absolute;
+
+    top: unset;
+    right: unset;
+    left: gutter(2.5);
+    bottom: gutter(2.5);
+    padding-bottom: gutter(0.8);
+    z-index: 20;
+    color: $light;
+
+    &::after {
+      @extend %absolute;
+
+      content: "";
+      right: unset;
+      top: unset;
+      width: gutter(7);
+      height: gutter(0.2);
+      background-color: $light;
+      transition: $transition ease-in;
+    }
+  }
+}
